@@ -2,7 +2,6 @@
   import Icon from "svelte-awesome";
   import { faRocket } from "@fortawesome/free-solid-svg-icons";
   import { onMount } from "svelte";
-  import { launchData } from "@/stores/launch.store";
   onMount(() => {
   });
 

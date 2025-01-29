@@ -15,7 +15,7 @@ export class Scenario {
         SatelliteCatalogDataProvider>> = writable([{
             refresh: 0,
             name: "spaceaware",
-            OMM_URL: "https://api.spaceaware.io/data/OMM?format=fbs",
-            CAT_URL: "https://api.spaceaware.io/data/CAT?format=fbs"
+            OMM_URL: "https://archive.digitalarsenal.io/mpe?key=123234",
+            CAT_URL: "https://archive.digitalarsenal.io/cat?key=123234"
         }]);
 }
