@@ -21,7 +21,7 @@
 
   onMount(() => {
     //COIServiceWorker();
-    fetch("https://celestrak.digitalarsenal.io/get-ip")
+    fetch("https://archive.digitalarsenal.io/ip")
       .then((response) => response.json())
       .then((data) => {
         $IP = data.ip;

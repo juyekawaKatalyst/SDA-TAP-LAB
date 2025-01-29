@@ -341,10 +341,10 @@ storeViewer.subscribe(async (sviewer) => {
       async (dProviders: Array<SatelliteCatalogDataProvider>) => {
         for (const dP of dProviders) {
           if (dP.OMM_URL) {
-            let ommBuffer = await (await fetch(dP.OMM_URL)).arrayBuffer();
+            let ommBuffer = await (await fetch(dP.OMM_URL)).json();
             let catBuffer = dP.CAT_URL
-              ? await (await fetch(dP.CAT_URL)).arrayBuffer()
-              : new ArrayBuffer(0);
+              ? await (await fetch(dP.CAT_URL)).json()
+              : [];
 
             let hasDataSource = viewer.dataSources.getByName(
               dP.name
