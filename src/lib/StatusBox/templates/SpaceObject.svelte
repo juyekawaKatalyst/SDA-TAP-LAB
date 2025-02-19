@@ -306,11 +306,10 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-2">
+            <!--<div class="flex flex-col gap-2">
               <div class="flex gap-2">
                 <div class="flex items-center justify-center gap-2">
-                  <!-- svelte-ignore a11y-click-events-have-key-events -->
-                  <!-- svelte-ignore a11y-no-static-element-interactions -->
+                  
                   <div
                     class="border rounded p-1 bg-gray-800"
                     on:click={toggleCoverage}
@@ -324,7 +323,7 @@
                   COVERAGE
                 </div>
               </div>
-            </div>
+            </div>-->
             {#if getModel(OMM.OBJECT_NAME)}
               <div class="flex flex-col gap-2">
                 <div class="flex gap-2">
