@@ -1,3 +1,4 @@
+// Sample HYPT test data for demo scenario
 export default [
   {
     "id": "hyp1001",
@@ -10,22 +11,26 @@ export default [
         {
           "ID": "63604",
           "NAME": "SHIYAN 27F",
-          "CATEGORY": "SATELLITE_STATUS",
+          "CATEGORY": "SATELLITE STATUS DEMO",
           "COUNTRY_CODE": "CN",
           "ANALYSIS_METHOD": "Orbital Pattern Analysis",
-          "EVENT_START_TIME": "2025-05-17T00:47:00.000Z",
+          "EVENT_START_TIME": "2025-05-17T00:45:00.000Z",
           "EVENT_END_TIME": "2025-05-17T00:50:00.000Z",
-          "PRIORITY": "4",
-          "DEMO": true,
+          "PRIORITY": "4",  // This will change to "2" during the demo
+          "DEMO": true,  // Flag to enable demo mode
+          "SENSOR_LOCATION": {
+            "latitude": 35.1983,  // Flagstaff, Arizona
+            "longitude": -111.6513,
+            "altitude": 100  // Optional, in meters above ground
+          },
           "CAT_IDS": [
-            "54824"  // FENGYUN 2F only - this should be the actual entity ID in the viewer
+            "63604"
           ],
           "SIT_IDS": [
             "situation-fengyun-monitoring"
           ],
           "ROW_INDICATORS": [
-            "Indicator Flag",  
-            
+            "Indicator Status"
           ],
           "COL_INDICATORS": [
             "ORB",
@@ -37,14 +42,12 @@ export default [
             "AGE"
           ],
           "MATRIX": [
-            // Row 0: FENGYUN (entity 37872) status indicators
-            true, null, null, null, true, false, true,
-          
-          
+            // Row 0: Status indicators for the entity
+            true, null, null, null, true, false, true
           ],
           "SCORE": [
             {
-              "OBJECT_ID": "37872", 
+              "OBJECT_ID": "54824", 
               "VALUE": 0.78,
               "CONFIDENCE": 0.93,
               "ALGORITHM": "SYSTEM_STATUS_ANALYSIS"
@@ -53,6 +56,5 @@ export default [
         }
       ]
     }
-  },
-  
+  }
 ]
