@@ -2,6 +2,7 @@
   import dacredit from "@/assets/da-credit.png";
   import sda from "@/assets/sda-credit.png";
   import ion from "@/assets/ion-credit.png";
+  import kst from "@/assets/katalystlogo.png";
 
   function openLink(event: MouseEvent) {
     const target = event.target as HTMLImageElement;
@@ -23,11 +24,14 @@
   on:keypress={handleKeyPress}
   role="button"
   tabindex="0">
-  <div class="rounded border bg-white p-1 mb-[2px]">
-    <img class="w-24 sm:w-28 md:w-36" src={sda} alt="https://sdataplab.org/" />
+  <div class="flex flex-col pt-2">
+    <img class="h-16 w-auto" src={kst} alt="https://katalystspace.com/" />
+  </div>
+  <div class="rounded border bg-white p-1 mb-[1px]">
+    <img class="h-14" src={sda} alt="https://sdataplab.org/" />
   </div>
   <div class="flex flex-col pt-2">
-    <img class="w-20 sm:w-24 md:w-32" src={dacredit} alt="https://digitalarsenal.io" />
-    <img class="w-20 sm:w-24 md:w-32" src={ion} alt="https://cesium.com" />
+    <img class="h-8" src={dacredit} alt="https://digitalarsenal.io" />
+    <img class="h-8" src={ion} alt="https://cesium.com" />
   </div>
 </div>
