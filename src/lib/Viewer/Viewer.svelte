@@ -24,6 +24,7 @@
   import SpaceObjectButton from "../SpaceObjects/Button.svelte";
   import SettingsButton from "../Settings/Button.svelte";
   import UserButton from "../User/Button.svelte";
+  import OOIButton from "../ObjectsOfInterest/Button.svelte"
   import Events from "../Events/Button.svelte";
   import { isSafe } from "@/stores/dev.store";
   import { content, template } from "@/stores/modal.store";
@@ -110,7 +111,7 @@
     addButton(SpaceObjectButton);
     addButton(Events);
     addButton(SettingsButton);
-    addButton(UserButton);
+    addButton(OOIButton);
     const toolbar: any = document.querySelector(".cesium-viewer-toolbar");
 
     const children = toolbar.children;
