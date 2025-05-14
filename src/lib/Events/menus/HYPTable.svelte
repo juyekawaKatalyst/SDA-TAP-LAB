@@ -107,7 +107,6 @@
     // Check if this is a demo event
     isDemoMode = !!$activeEvent?.DEMO;
     console.log("Demo mode:", isDemoMode);
-    
     $activeGroup = "defaultGroup";
     const sDC = viewer?.dataSources.getByName("spaceaware")[0];
     setTimeout(() => 
@@ -125,6 +124,7 @@
       entity.point.pixelSize = 10;
       if (entity.label) {
         entity.label.show = true;
+        entity.label.text = $activeEvent?.NAME;
       }
       (entity as SpaceEntity).showOrbit({show: true})
     }
@@ -254,7 +254,7 @@
   // Function to schedule matrix updates
   function scheduleMatrixUpdates(startTime) {
     // Schedule update 120 seconds after event start
-    const update1Time = new Date(startTime.getTime() + 200000);
+    const update1Time = new Date(startTime.getTime() + 220000);
     scheduledUpdates.push({
       time: update1Time,
       update: () => {
@@ -287,7 +287,7 @@
     });
     
     // Schedule priority update
-    const priorityUpdateTime = new Date(startTime.getTime() + 220000);
+    const priorityUpdateTime = new Date(startTime.getTime() + 240000);
     scheduledUpdates.push({
       time: priorityUpdateTime, 
       update: () => {
